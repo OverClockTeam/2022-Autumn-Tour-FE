@@ -42,7 +42,96 @@
                 <input type="button" value="获取短信验证码" /> <br />
 
                 <label for="email">邮箱：</label>
-                <input type="text" maxlength="20" id="email" />
+                <input type="text" maxlength="20" id="email" /><!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>学生信息采集</title>
+
+        <!-- CSS部分 -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- 网页导航部分 -->
+        <ul class="nav">
+            <li id="slogan">菜就多练</li>
+            <li id="title">
+                <strong>学生信息收集表</strong>
+            </li>
+            <li id="User-name">
+                <img src="head.jpg" class="head-portrait" />0h_x0
+            </li>
+        </ul>
+        <!-- 收集表部分 -->
+        <form method="get" name="收集表" class="submit-form">
+            <label for="name">昵称：</label>
+            <input type="text" id="name" class="input" /> <br />
+
+            <label for="age">年龄：</label>
+            <input type="number" id="age" class="input" /> <br />
+
+            <label for="tel">电话：</label>
+            <input type="tel" maxlength="11" id="tel" class="input" />
+            <input type="button" value="获取短信验证码" class="button" /> <br />
+
+            <label for="email">邮箱：</label>
+            <input type="text" maxlength="20" id="email" class="input" />
+            <select class="select">
+                <option>@gmail.com</option>
+                <option>@qq.com</option>
+                <option>@sina.com</option>
+                <option>@163.com</option>
+                <option selected="selected">@hust.edu.cn</option>
+            </select>
+            <br />
+            <input type="submit" class="button-submit-reset" />
+            <input type="reset" class="button-submit-reset" />
+        </form>
+        <!-- 表格展示部分 -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>昵称</th>
+                    <th>性别</th>
+                    <th>年龄</th>
+                    <th>电话</th>
+                    <th>邮箱</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>kaaaasa</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>123456789001</td>
+                    <td>hahaha@163.com</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>Jamren</td>
+                    <td>女</td>
+                    <td>19</td>
+                    <td>123412341234</td>
+                    <td>lalala@gmail.com</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>FeiJu</td>
+                    <td>男</td>
+                    <td>18</td>
+                    <td>234523452345</td>
+                    <td>heiheihei@hust.edu.cn</td>
+                    <td><a href="">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
                 <select>
                     <option>@gmail.com</option>
                     <option>@qq.com</option>
