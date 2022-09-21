@@ -1,0 +1,178 @@
+body {
+    font-family: "Microsoft YaHei";
+    color: white;
+    /* background-image: url("bkg.jpg");
+    background-size: cover; */
+    background-color: #0d1117;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+/* 导航栏设置 */
+.nav {
+    margin-left: 30px;
+    height: 160px;
+    width: calc(100%-60px);
+    position: relative;
+    top: 60px;
+}
+
+/* 设置首页标题 */
+#title {
+    font-size: 50px;
+    font-weight: 800;
+
+    width: 400px;
+    height: 60px;
+    /* 设置相对位置居中 */
+    position: relative;
+    left: 50%;
+    margin-left: -200px;
+}
+
+/* 设置用户名 */
+#User-name {
+    font-size: 20px;
+    width: 150px;
+    height: 60px;
+    line-height: 50%;
+    font-weight: 700;
+    position: absolute;
+    right: 25%;
+    top: 20px;
+}
+
+/* 设置标语 */
+#slogan {
+    width: 150px;
+    height: max-content;
+    font-weight: 700;
+    position: absolute;
+    left: 25%;
+    top: 40px;
+}
+
+/* 设置头像 */
+.head-portrait {
+    position: relative;
+    left: -10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 35px;
+    border: 2px solid white;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 给内容做边框标记 */
+.content {
+    width: max-content;
+    border: 1px;
+    border: 1px solid red;
+}
+
+/* 提交表编辑 */
+.submit-form {
+    width: 420px;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    margin-left: -150px;
+    text-align: left;
+}
+
+/* 提交与重置按钮的编辑 */
+.button-submit-reset {
+    background-color: rgb(35, 134, 54);
+    color: white;
+    font-size: 15px;
+    width: 60px;
+    border-radius: 5px;
+    border: 1px solid rgb(230, 199, 160);
+    position: relative;
+    left: 25%;
+    margin-right: 10px;
+}
+
+/* 邮箱选择界面编辑 */
+.select {
+    color: white;
+    background-color: rgb(33, 38, 45);
+    border: 1px solid white;
+    font-size: 14px;
+    height: 25px;
+    border-radius: 5px;
+    width: 120px;
+    text-indent: 5px;
+}
+
+/* 提交输入框编辑 */
+.input {
+    background-color: rgb(22, 27, 34);
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    /* 设置圆角 */
+    border-radius: 20px 5px;
+    /* 设置输入起点位置 */
+    text-indent: 10px;
+}
+
+/* label设置 */
+label {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* 获取验证码按键编辑 */
+.button {
+    color: white;
+    background-color: rgb(33, 38, 45);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 120px;
+    height: 25px;
+    text-align: center;
+}
+
+/* 表格编辑 */
+.table {
+    width: 600px;
+    position: absolute;
+    bottom: 15%;
+    margin-left: -300px;
+    left: 50%;
+
+    table-layout: auto;
+    text-align: center;
+    /* 边框设置 */
+    border: none;
+}
+
+.table td {
+    font-weight: 500;
+    border-bottom: 1px solid rgb(230, 199, 160);
+    padding: 12px 0;
+}
+
+.table th {
+    border-bottom: 1px solid rgb(230, 199, 160);
+    padding: 12px 0;
+}
+
+/* 设置链接变色 */
+a {
+    color: rgb(88, 166, 218);
+}
+a:hover {
+    color: rgb(226, 186, 135);
+}
