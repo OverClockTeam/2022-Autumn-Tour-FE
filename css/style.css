@@ -43,28 +43,51 @@ img{
     width: 35px;
     border-radius: 35px;
 }
-/* 设置表单部分宽度并水平居中 */
+
+
+/* 设置表单部分宽度及高度并水平居中 */
 .post{
-    width: 400px;
+    width: 300px; 
+    height: 280px;
     margin: 0 auto;
 }
-/* 设置input标签圆角边框格式 */
-input{
-    border-radius: 10px;
+/* 设置input标签样式 */
+#name,#age,#phoneNum,#email{
+    width: 240px;
+    height: 20px;
+    border-radius: 20px;
+    margin: 15px auto;
+    border: 1px solid rgb(0, 128, 255);
 }
-/* 设置表单里各元素间距 */
-.post td{
-    padding-left: 80px;
-    padding-bottom: 15px;
+/* 设置输入框被选中后的样式 */
+#name:focus,#age:focus,#phoneNum:focus,#email:focus{
+    outline: none;
+    border: 2px solid rgb(72, 0, 255);
 }
-/* 设置按钮位置 */
+/* 设置label样式 */
+.post label{
+    display: block;
+}
+/* 设置按钮样式 */
 .post #commit{
-    margin-left: 100px;
+    margin-left: 120px;
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: blueviolet;
+    color: white;
+    border: 0;
 }
+/* 设置鼠标移入按钮时的样式 */
+.post #commit:hover{
+    color: red;
+}
+
+
 /* 设置表格部分位置并水平居中，同时让文字居中 */
 .tab{
     width: 600px;
-    margin: 30px auto;
+    margin: 35px auto;
     text-align: center;
     vertical-align: middle;
 }
