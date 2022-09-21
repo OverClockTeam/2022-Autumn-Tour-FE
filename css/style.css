@@ -56,7 +56,6 @@ img{
     width: 240px;
     height: 20px;
     border-radius: 20px;
-    margin: 15px auto;
     border: 1px solid rgb(0, 128, 255);
 }
 /* 设置输入框被选中后的样式 */
@@ -67,10 +66,18 @@ img{
 /* 设置label样式 */
 .post label{
     display: block;
+    height: 30px;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.post #la2,#la3{
+    padding-bottom: 15px;
 }
 /* 设置按钮样式 */
 .post #commit{
     margin-left: 120px;
+    margin-top: 10px;
     width: 80px;
     height: 30px;
     border-radius: 30px;
@@ -82,7 +89,12 @@ img{
 .post #commit:hover{
     color: red;
 }
-
+/* 设置提示部分的样式 */
+.post .hint{
+    height: 15px;
+    margin-left: 50px;
+    display: block;
+}
 
 /* 设置表格部分位置并水平居中，同时让文字居中 */
 .tab{

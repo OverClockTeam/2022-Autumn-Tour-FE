@@ -1,6 +1,101 @@
-// 判断用户输入信息是否正确
+// 输出提示信息，type为检测类型，isTr为检测结果
+function hint(type,isTr){
+    if (type=="NAME") {
+        var sp=document.getElementById("nameHint");
+        sp.style.fontSize="12px";
+        switch(isTr){
+            case 0:
+                sp.innerHTML="英文名最长15个字符,中文名最长5个汉字";
+                sp.style.color="grey"
+                break;
+            case 1:
+                sp.innerHTML="格式正确";
+                sp.style.color="green";
+                break;
+            case -1:
+                sp.innerHTML="格式错误";
+                sp.style.color="red";
+                break;
+            default:
+        }
+    }
+    else{
+        var sp=document.getElementById("emailHint");
+        sp.style.fontSize="12px";
+        switch(isTr){
+            case 0:
+                sp.innerHTML="请输入有效的邮箱地址";
+                sp.style.color="grey"
+                break;
+            case 1:
+                sp.innerHTML="格式正确";
+                sp.style.color="green";
+                break;
+            case -1:
+                sp.innerHTML="格式错误";
+                sp.style.color="red";
+                break;
+            default:
+        }
+    }
+}
+// 判断输入邮箱格式是否正确,正确返回1，错误返回-1，空值返回0
+function checkEmail(){
+    var em=document.getElementById("email").value;
+    if (em.length==0) {
+        hint("EMAIL",0);
+        return 0;
+    }
+    if(em.match("^[a-zA-Z0-9]+@[a-zA-Z0-9]+$")){
+        hint("EMAIL",1);
+        return 1;
+    }
+    hint("EMAIL",-1)
+    return -1;
+}
+//判断输入名字格式是否正确，正确返回1，错误返回-1，空值返回0
+function checkName(){
+    var na=document.getElementById("name").value;
+    if(na.length==0){
+        hint("NAME",0);
+        return 0;
+    }
+    if (na.match("^[a-zA-Z]{1,15}$")||na.match("^[\u4E00-\u9FA5]{1,5}$")) {
+        hint("NAME",1);
+        return 1;
+    }
+    hint("NAME",-1)
+    return 1;
+}
+function clearHint(type){
+    if(type=="NAME"){
+        document.getElementById("nameHint").innerHTML="";
+    }
+    else{
+        document.getElementById("emailHint").innerHTML="";
+    }
+}
+// 判断用户输入信息是否正确,除姓名与邮箱外
 function isTrue(){
-
+    // 判断电话长度是否正确
+    var ph=document.getElementById("phoneNum").value;
+    var b=0;
+    if(ph.length==7||ph.length==8||ph.length==11){
+        b=1;
+    }
+    if(b==0){
+        return false;
+    }
+    if(checkEmail()!=1){
+        return false;
+    }
+    if(checkName()!=1){
+        return false;
+    }
+    if(document.getElementById("age").value.length==0||document.getElementById("age").value=="0"){
+        return false;
+    }
+    return true;
 }
 // 在表格中删除一行
 function del(obj){
@@ -10,6 +105,11 @@ function del(obj){
 }
 // 在表格中添加一行信息
 function addRow(){
+    // 检测输入是否有误
+    if(!isTrue()){
+        alert("输入信息为空或格式错误，请检查后重新输入！");
+        return ;
+    }
     // 获取输入信息
     var name=document.getElementById("name").value;
     var age=document.getElementById("age").value;
@@ -34,3 +134,10 @@ var aList=document.getElementsByClassName("a");
 for(i=0;i<aList.length;i++){
     aList[i].addEventListener("click",function(){del(this)});
 }
+// 为输入框添加onfocus,oninput,onblur事件
+document.getElementById("email").addEventListener("focus",checkEmail);
+document.getElementById("email").addEventListener("input",checkEmail);
+document.getElementById("email").addEventListener("blur",function(){clearHint("EMAIL")});
+document.getElementById("name").addEventListener("focus",checkName);
+document.getElementById("name").addEventListener("input",checkName);
+document.getElementById("name").addEventListener("blur",function(){clearHint("NAME")});
