@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息收集表</title>
+    <link rel="stylesheet" href="Test.css">
+</head>
+
+<body>
+    <ul class="box">
+        <li class="center">学生信息收集表</li>
+        <li class="left"> 键盘敲烂 收入过万 </li>
+        <li class="right"> ZhaoYu </li>
+    </ul>
+    <div>
+        <form>
+            <label for="xingming" class="inf"> 姓名： </label>
+            <input type="text" name="name" id="xingming" /> <br />
+            <label for="nianling"> 年龄： </label>
+            <input type="text" name="age" id="nianling" /> <br />
+            <label for="dianhua"> 电话： </label>
+            <input type="text" name="phone" id="dianhua" /> <br />
+            <label for="youxiang"> 邮箱： </label>
+            <input type="text" name="mail" id="youxiang" /> <br />
+            <input type="submit">
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th> 姓名 </th>
+                <th> 年龄 </th>
+                <th width="100"> 电话 </th>
+                <th width="120"> 邮箱 </th>
+                <th> 操作 </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> 张三 </td>
+                <td> 18 </td>
+                <td> 16732789844 </td>
+                <td> cod@hh.com </td>
+                <td><a href="#"> 删除 </a></td>
+            </tr>
+            <tr>
+                <td> 李四 </td>
+                <td> 19 </td>
+                <td> 14567893456 </td>
+                <td> 996@hh.com </td>
+                <td> <a href="#"> 删除 </a> </td>
+            </tr>
+            <tr>
+                <td> 王五 </td>
+                <td> 20 </td>
+                <td> 12905614532 </td>
+                <td> nice@qq.com </td>
+                <td> <a href="#"> 删除 </a> </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
