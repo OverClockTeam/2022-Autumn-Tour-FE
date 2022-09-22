@@ -1,0 +1,27 @@
+/* 去除删除下划线 */
+table a {
+    text-decoration: none;
+}
+
+.box {
+    width: 1115px;
+    height: 100px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.center {
+
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
