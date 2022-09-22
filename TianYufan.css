@@ -1,0 +1,73 @@
+
+/* 去除无序列表前面的点 */
+ ul
+ {list-style: none;
+
+ }
+ .bai{
+  color:red
+ }
+ /* 设置头像 */
+.image{border-radius:50%;
+  width:60px;
+  height:60px;
+  background: url(./bl1.jpg) no-repeat center;
+  background-size: 60px;
+  position:absolute;
+  right:50px;
+  top:30px;
+}
+/* 绝对定位设置收集表位置 */
+    .shouji{
+      position: absolute;
+      right:500px;
+      top:0;
+    }
+    .inp{
+      width:380px;
+      height:200px;
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    /* 输入框的设置 */
+input{
+   width:300px;
+  height:20px;
+   border:1px solid blue ;
+   border-radius: 10px;
+   margin-bottom: 20px;
+
+ }  
+ /* 头像框下的名字设置 */
+ .tou{
+  position: absolute;
+  right:50px;
+  top:80px;
+ } 
+ table
+  {  width:700px;
+     height:200px;
+     border-collapse:collapse;
+     padding-bottom: 10px;
+     margin-left: 250px;
+   
+  }
+  /* 设置提交按钮属性 */
+  input[type=submit]{
+    background-color: blueviolet;
+    color :white;
+    width:80px;
+    height:30px;
+    font-size: 20px;
+    margin-left: 150px;
+  }
+  /* 设置分割线和文本居中 */
+tr{text-align: center;
+    border-bottom :1px solid black;
+    margin-bottom: 10px;
+ }
+ /* 删除删除下划线 */
+ a{
+  text-decoration:none;
+ }

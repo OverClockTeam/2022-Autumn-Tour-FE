@@ -4,28 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>无序列表</title>
+    <title>任务</title>
+    <link rel="stylesheet" href="TianYufan.css">
 </head>
+<!-- 无序列表 -->
+<div class="shou">
     <ul>
-        <li>摆烂</li>
+        
+        <li class="bai">摆烂</li>
         <li>
-            <h1>学生信息收集表</h1>
+            <h1 class="shouji">学生信息收集表</h1>  <!--  class把字体变颜色 -->
         </li>
-        <li>hankiid</li>
-
+        <li class="image"></li>
+        <li class="tou"><h4>hankiid</h4></li>
     </ul>
+</div>
+        
     <form action="#" methed="get">
+        <div class="inp">
         <!-- text 文本框 用户可以里面输入任何文字 -->
-        <label for="name">姓名</label> <input type="text" name="username" id="name"  >   <br>
+        <label for="name">姓名:</label> <input type="text" name="username" id="name" >   <br>
         <label for="age">年龄: </label><input type="number" name="age" id="age" >   <br>
         <label for="tel">电话:</label> <input type="tel" name="tel" id="tel">   <br>
-        <label for="youxiang">邮箱:</label> <input type="text" name="youxiang"  id="youxiang">   <br>
-        <input type="submit" >
+        <label for="youxiang">邮箱:</label> <input type="text" name="youxiang"  id="youxiang" class="one">   <br>
+        <input type="submit" class="blueviolet">
+        </div>
     </form>
     <body>
-    
+
         <table>
-            <tr><th>姓名</th>        <th>年龄</th>       <th>电话</th>       <th>邮箱</th>   <th>操作</th>  </tr>
+            <!-- 名字整活儿用的 -->
+            <tr><th >姓名</th>        <th>年龄</th>       <th>电话</th>       <th >邮箱</th>   <th>操作</th>  </tr>
             <tr><td>张三</td>   <td>18</td>  <td>17734562345</td>  <td>10028743691@163.com</td>  <td><a href="javascript:void(0);">删除</a></td></tr>
             <tr><td>龙傲天</td>   <td>30</td>  <td>17834562345</td>  <td>10123242391@163.com</td>  <td><a href="javascript:void(0);">删除</a></td></tr>
             <tr><td>叶凉辰</td>   <td>23</td>  <td>17835232345</td>  <td>14325243691@qq.com</td>  <td><a href="javascript:void(0);">删除</a></td></tr>
