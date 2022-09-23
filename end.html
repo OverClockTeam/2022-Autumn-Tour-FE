@@ -1,73 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>first</title>
-   <link rel="stylesheet" href="./work.css">
+    <link rel="stylesheet" href="./work.css">
+
 <body>
-  <div class="left"></div> 
-  <!-- 这里左右又添加盒子是为了让登陆页面能够始终在浏览器窗口的正中间，本来打算用flex，设置中间div为flex:1;但是好像不与要就能成功了 -->
-  <div>   
-   <div class="container">
-    <img src="./xiong.jpg" alt="">
-    <ul class="nav"> 
-        <li class="font">嘿嘿我最棒!</li>
-        <li style="font-size:19px;"><strong>学生信息收集表</strong></li>
-        <li  class="xiong" > <em>Xixi</em></li>
-    </ul>
-    <div class="mid" >
-        姓名: <input type="text"  class="name" placeholder="10个字段以内~" >
-        <br>
-        年龄: <input type="text" value=" " class="age">
-        <br>
-        电话: <input type="text" placeholder=" ">
-        <br>
-        邮箱: <input type="text" class="email">
-        <br>
-        <input type="submit" value="提交" class="button">
+    <div class="left"></div>
+    <!-- 这里左右又添加盒子是为了让登陆页面能够始终在浏览器窗口的正中间，本来打算用flex，设置中间div为flex:1;但是好像不与要就能成功了 -->
+    <div>
+        <div class="container">
+            <img src="./xiong.jpg" alt="">
+            <ul class="nav">
+                <li class="font">嘿嘿我最棒!</li>
+                <li style="font-size:19px;"><strong>学生信息收集表</strong></li>
+                <li class="xiong"> <em>Xixi</em></li>
+            </ul>
+            <div class="mid">
+                姓名: <input type="text" class="name" placeholder="10个字段以内~">
+                <br>
+                年龄: <input type="text" value=" " class="age">
+                <br>
+                电话: <input type="text" placeholder=" ">
+                <br>
+                邮箱: <input type="text" class="email">
+                <br>
+                <input type="submit" value="提交" class="button">
+            </div>
+            <div>
+                <table frame="below" class="table" border="0" cellpadding="0" cellspacing="0">
+                    <thead class="table-td">
+                        <th>姓名</th>
+                        <th>年龄</th>
+                        <th>电话号码</th>
+                        <th>联系方式</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody class="table-td">
+                        <tr>
+                            <td class="name">张三</td>
+                            <td class="age">18</td>
+                            <td class="phoneNum">12345678901</td>
+                            <td class="email">hahaha@163.com</td>
+                            <td><a href=" js:; " class="a">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td class="name">李四</td>
+                            <td class="age">19</td>
+                            <td class="phoneNum">10987654321</td>
+                            <td class="email">lalala@gmail.com</td>
+                            <td><a href="js:; " class="a">删除</a></td>
+                        </tr>
+                        <tr>
+                            <td class="name">王五</td>
+                            <td class="age">18</td>
+                            <td class="phoneNum">16767676767</td>
+                            <td class="email">heiheihei@hust.edu.cn</td>
+                            <td><a href=" js:;" class="a">删除</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <link rel="stylesheet" href="./work.js">
+            </div>
+        </div>
     </div>
-   <div>
-    <table  frame="below" class="table" border="0" cellpadding="0" cellspacing="0">
-        <thead class="table-td">
-            <th>姓名</th>
-            <th>年龄</th>
-            <th>电话号码</th>
-            <th>联系方式</th>
-            <th>操作</th>
-        </thead>
-        <tbody  class="table-td">
-            <tr>
-                <td class="name">张三</td>
-                <td class="age">18</td>
-                <td class="phoneNum">12345678901</td>
-                <td class="email">hahaha@163.com</td>
-                <td><a href=" js:; " class="a">删除</a></td>
-            </tr>
-            <tr>
-                <td class="name">李四</td>
-                <td class="age">19</td>
-                <td class="phoneNum">10987654321</td>
-                <td class="email">lalala@gmail.com</td>
-                <td><a href="js:; " class="a">删除</a></td>
-            </tr>
-            <tr>
-                <td class="name">王五</td>
-                <td class="age">18</td>
-                <td class="phoneNum">16767676767</td>
-                <td class="email">heiheihei@hust.edu.cn</td>
-                <td><a href=" js:;" class="a">删除</a></td>
-            </tr>
-        </tbody>
-    </table>
-    <link rel="stylesheet" href="./work.js">
-   </div>
-   </div>
-</div>
-<div class="right"></div>
+    <div class="right"></div>
+    <div class="test">
+        <div style="width: 100px; height: 100px; background-color: #ddd; overflow: hidden;">
+            <img src="xiong.jpg" alt=""
+                style="display: block; position: static; width: 30px; border-radius: 10%; margin: 15px auto 0;">
+            <em
+                style="display: block; width: 40px; height: 40px; border-radius: 50%; background-color: #f4a1a1; text-align: center; line-height: 40px; margin: 5px auto 0;">Xixi</em>
+        </div>
+    </div>
 </body>
 <script src="./work.js"></script>
 </head>
+
 </html>
