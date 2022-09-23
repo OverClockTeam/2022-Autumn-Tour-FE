@@ -50,7 +50,7 @@ input{
      height:200px;
      border-collapse:collapse;
      padding-bottom: 10px;
-     margin-left: 250px;
+     margin: 0 auto;
    
   }
   /* 设置提交按钮属性 */
