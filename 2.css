@@ -1,4 +1,3 @@
-
 .box {
     width: 1115px;
     height: 100px;
@@ -7,7 +6,6 @@
 }
 
 .center {
-
     text-align: center;
     font-size: 30px;
     font-weight: 700;
@@ -22,8 +20,8 @@
     float: right
 }
 
-div {
-    margin: 0px auto;
+.f1 {
+    text-align: center;
 }
 
 table {
