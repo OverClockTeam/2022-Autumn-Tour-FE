@@ -1,7 +1,7 @@
-.box {
-    width: 1115px;
+ul {
+    width: 1200px;
     height: 100px;
-    margin: 0 auto;
+    margin: auto auto;
     list-style-type: none;
 }
 
@@ -9,7 +9,6 @@
     text-align: center;
     font-size: 30px;
     font-weight: 700;
-    margin: 0 auto;
 }
 
 .left {
@@ -20,13 +19,56 @@
     float: right
 }
 
-.f1 {
+form {
     text-align: center;
+    margin: 20px;
+}
+
+.inf {
+    height: 20px;
+
+}
+
+input[type=text] {
+    width: 150px;
+    margin: 6px 0px;
+    border: black 1px solid;
+    padding: 8px 8px;
+    border-radius: 18px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    background-color: lightblue;
+    width: 200px;
+}
+
+input[type=submit] {
+    width: 80px;
+    margin: 12px 0px;
+    padding: 3px;
+    border: black 1px;
+    background-color: lightblue;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
+}
+
+th {
+    height: 35px;
+}
+
+td {
+    height: 35px;
+    border-top: 1px solid gray;
+}
+
+.bottom {
+    border-bottom: 1px solid gray;
 }
 
 table a {
