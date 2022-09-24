@@ -6,20 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学生信息收集表</title>
-    <link rel="stylesheet" href="2.css">
+    <link rel="stylesheet" href="Test.css">
 </head>
 
 <body>
-    <ul class="box">
+    <ul>
+        <li class="left">键盘敲烂 收入过万</li>
+        <li class="right">ZhaoYu</li>
         <li class="center">学生信息收集表</li>
-        <li class="left"> 键盘敲烂 收入过万 </li>
-        <li class="right"> ZhaoYu </li>
+
     </ul>
     <div>
         <form>
             <label for="xingming" class="inf"> 姓名： </label>
             <input type="text" name="name" id="xingming" /> <br />
-            <label for="nianling"> 年龄： </label>
+            <label for="nianling" class="inf"> 年龄： </label>
             <input type="text" name="age" id="nianling" /> <br />
             <label for="dianhua"> 电话： </label>
             <input type="text" name="phone" id="dianhua" /> <br />
@@ -28,7 +29,7 @@
             <input type="submit">
         </form>
     </div>
-    <table>
+    <table cellspacing="0">
         <thead>
             <tr>
                 <th> 姓名 </th>
@@ -54,11 +55,11 @@
                 <td> <a href="#"> 删除 </a> </td>
             </tr>
             <tr>
-                <td> 王五 </td>
-                <td> 20 </td>
-                <td> 12905614532 </td>
-                <td> nice@qq.com </td>
-                <td> <a href="#"> 删除 </a> </td>
+                <td class="bottom"> 王五 </td>
+                <td class="bottom"> 20 </td>
+                <td class="bottom"> 12905614532 </td>
+                <td class="bottom"> nice@qq.com </td>
+                <td class="bottom"> <a href="#"> 删除 </a> </td>
             </tr>
         </tbody>
     </table>
