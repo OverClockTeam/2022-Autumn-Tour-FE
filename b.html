@@ -5,49 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="b.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <ul>
-        <li><h4>学在华中大</h4></li>
-        <li><h3>学生信息收集表</h3></li>
-        <li><h5>QianJZ</h5></li>
-    </ul>
-    <form action="">
-        <lable for="xm"> 姓名：</lable> <input type="text" id="xm"> <br>
-        <lable for="age"> 年龄：</lable> <input type="text" id="age"><br>
-        <lable for="dh"> 电话：</lable> <input type="text" id="dh"><br>
-        <lable for="yx"> 邮箱：</lable> <input type="text" id="yx"><br>
-        <input type="submit" value="提交"><br> <br>
-    </form>
-    <table border="1" cellspacing="0">
-        <tr>
-            <th width="50">姓名</th>
-            <th width="50">年龄</th>
-            <th width="100">电话</th>
-            <th width="150">邮箱</th>
-            <th width="50">操作</th>
-        </tr>
-        <tr>
-            <td>张三</td>
-            <td>18</td>
-            <td>12345678901</td>
-            <td>hahaha@163.com</td>
-            <td><a href="">删除</a></td>
-        </tr>
-        <tr>
-            <td>李四</td>
-            <td>19</td>
-            <td>48651445</td>
-            <td>lol@163.com</td>
-            <td><a href="">删除</a></td>
-        </tr>
-        <tr>
-            <td>王五</td>
-            <td>18</td>
-            <td>984581458</td>
-            <td>apex@163.com</td>
-            <td><a href="">删除</a></td>
-        </tr>
-    </table>
+    <div class="box0">
+        <div class="box1">
+            <ul>
+                <li class="li1"><h4>学在华中大</h4></li>
+                <li class="li2"><h3>学生信息收集表</h3></li>
+                <li><h5 class="li3">QianJZ</h5></li>
+                <li class="img"><img src="a.jpg"></li>
+            </ul>
+        </div>
+        <div class="box2">
+            <form class="form">
+                <lable for="xm"> <span>姓名:</span></lable> <input type="text" id="xm"> <br>
+                <lable for="age"> <span>年龄:</span></lable> <input type="text" id="age"><br>
+                <lable for="dh"> <span>电话:</span></lable> <input type="text" id="dh"><br>
+                <lable for="yx"> <span> 邮箱:</span></lable> <input type="text" id="yx"><br>
+                <input type="submit" value="提交" class="form_last">
+            </form>
+        </div>
+        <div class="box3">
+            <table>
+                <tr>
+                    <th width="50">姓名</th>
+                    <th width="50">年龄</th>
+                    <th width="100">电话</th>
+                    <th width="150">邮箱</th>
+                    <th width="50">操作</th>
+                </tr>
+                <tr>
+                    <td>张三</td>
+                    <td>18</td>
+                    <td>12345678901</td>
+                    <td>hahaha@163.com</td>
+                    <td class="hover"><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>李四</td>
+                    <td>19</td>
+                    <td>48651445</td>
+                    <td>lol@163.com</td>
+                    <td class="hover"><a href="">删除</a></td>
+                </tr>
+                <tr>
+                    <td>王五</td>
+                    <td>18</td>
+                    <td>984581458</td>
+                    <td>apex@163.com</td>
+                    <td class="hover"><a href="">删除</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

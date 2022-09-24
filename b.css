@@ -1,0 +1,125 @@
+*{
+    padding:0;
+    margin:0;
+}
+/* 清除内外边距 */
+
+.box0{
+    position: relative;
+    height:589px;
+    width:814px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+.box1{
+    height:120px;
+    width: 755px;
+}
+
+.box1 li{
+    list-style: none;
+}
+
+.li1{
+    position: relative;
+    top:32px;
+    left:29px;
+    font:normal 400 16px "microsoft yahei";
+}
+
+.li2{
+    font:normal 700 26px "microsoft yahei";
+    position: relative;
+    left:319px;
+}
+
+.li3{
+    position: absolute;
+    top:80px;
+    right:35px;
+    font:normal 700 16px "microsoft yahei";
+}
+
+.box2{
+    width : 814px;
+    height: 284px;
+}
+
+.form input{
+    border-radius: 16px;
+    width:330px;
+    height: 32px;
+    margin-bottom: 21px;
+    margin-left: 12px;
+    border-color: rgb(0, 255, 255);
+}
+
+/* .form input:hover{
+    box-shadow: 10px 10px -4px rgb(67, 67, 184);
+}没效果不知道为啥 */
+
+form .form_last{
+    width : 116px;
+    height : 40px;
+    border-radius: 10px;
+    background-color: rgb(55, 128, 197);
+    margin-left: 350px;
+    border-color: rgba(0,0,0,0);
+}
+
+
+
+.form span{
+    margin-left: 215px;
+}
+
+.box3{
+    height: 185px;
+    width: 814px;
+}
+
+
+
+table{
+    height : 185px;
+    width : 573px;
+    margin-left: 129px;
+}
+
+th{
+    border-bottom: 1px dotted rgb(6, 6, 110);
+}
+
+ td{
+    text-align: center;
+    height : 44px;
+    line-height: 44px;
+    border-bottom: 1px dotted rgb(6, 6, 110);
+
+ }
+
+ 
+ a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    width :69.59px;
+ }
+
+ a:hover{
+    color: rgb(240, 135, 60);
+    background-color: rgb(220, 223, 224);
+ }
+
+ .form_last:hover{
+    background-color: rgb(55, 128, 197,0.8);
+ }
+
+.img{
+    position :relative;
+    left: 735px;
+    top : -20px;
+}
