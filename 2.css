@@ -29,6 +29,7 @@ ul {
     float: right;
     color: rgb(223, 116, 134);
     font-size: 30px;
+    font-weight: 700;
 }
 
 form {
@@ -36,13 +37,9 @@ form {
     margin: 20px;
 }
 
-.inf {
-    height: 20px;
-
-}
 
 input[type=text] {
-    width: 150px;
+    width: 160px;
     margin: 6px 0px;
     border: black 1px solid;
     padding: 8px 8px;
@@ -93,5 +90,33 @@ table a {
 }
 
 body {
-    background-image: url(images/ba2.png);
+    animation-name: body;
+    animation-duration: 1s;
+    background-image: url(images/ba12.png);
+    animation-timing-function: linear;
+    background-size: cover;
+}
+
+@keyframes body {
+    0% {
+        opacity: 0;
+        background-image: url(images/ba11.jpg);
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+        background-image: url(images/ba12.png);
+    }
 }
