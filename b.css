@@ -4,77 +4,83 @@
 }
 /* 清除内外边距 */
 
-.box0{
+.wrap{
     position: relative;
     height:589px;
     width:814px;
-    background-color: #fff;
+    background-color: rgb(10, 1, 26);
     margin: 0 auto;
+    border-radius: 20px;
 }
 
-.box1{
+.header{
     height:120px;
     width: 755px;
 }
 
-.box1 li{
+.header li{
     list-style: none;
 }
 
-.li1{
+.list_1{
     position: relative;
     top:32px;
-    left:29px;
+    left:79px;
     font:normal 400 16px "microsoft yahei";
 }
 
-.li2{
+.list_2{
     font:normal 700 26px "microsoft yahei";
     position: relative;
     left:319px;
 }
 
-.li3{
+.list_3{
     position: absolute;
     top:80px;
-    right:35px;
+    right:85px;
     font:normal 700 16px "microsoft yahei";
 }
 
-.box2{
+.main{
     width : 814px;
     height: 284px;
 }
 
 .form input{
     border-radius: 16px;
-    width:330px;
+     width:310px; 
     height: 32px;
     margin-bottom: 21px;
     margin-left: 12px;
-    border-color: rgb(0, 255, 255);
+
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-/* .form input:hover{
-    box-shadow: 10px 10px -4px rgb(67, 67, 184);
-}没效果不知道为啥 */
-
-form .form_last{
-    width : 116px;
+button{
     height : 40px;
     border-radius: 10px;
-    background-color: rgb(55, 128, 197);
-    margin-left: 350px;
-    border-color: rgba(0,0,0,0);
+    background-color: rgb(11, 156, 48);
+    margin-left: 374px;
+    padding-left: 44px;
+    padding-right: 44px;
+    border-color: rgb(255, 255, 255,0);
+    color :#fff;
 }
 
 
 
 .form span{
-    margin-left: 215px;
+    display: inline-block;
+    margin-left: 150px;
+    background-color: rgb(11, 156, 48);
+    border-radius: 10px;
+    width : 100px;
+    text-align: center;
 }
 
-.box3{
+.footer{
     height: 185px;
     width: 814px;
 }
@@ -88,38 +94,42 @@ table{
 }
 
 th{
-    border-bottom: 1px dotted rgb(6, 6, 110);
+    border-bottom: 1px solid #fff;
 }
 
  td{
     text-align: center;
     height : 44px;
     line-height: 44px;
-    border-bottom: 1px dotted rgb(6, 6, 110);
+    border-bottom: 1px solid #fff;
 
  }
 
  
  a{
     text-decoration: none;
-    color: black;
     display: inline-block;
     height: 44px;
     line-height: 44px;
     width :69.59px;
+    color :#fff;
  }
 
  a:hover{
-    color: rgb(240, 135, 60);
-    background-color: rgb(220, 223, 224);
+    background-color: rgb(11, 156, 48);
+    border-radius: 10px;
  }
 
- .form_last:hover{
-    background-color: rgb(55, 128, 197,0.8);
+button:hover{
+    background-color:rgb(11, 156, 48,0.8);
  }
 
 .img{
     position :relative;
-    left: 735px;
+    left: 685px;
     top : -20px;
+}
+
+.font_color{
+    color : #fff;
 }
