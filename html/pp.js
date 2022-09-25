@@ -46,9 +46,6 @@ for(var i=0;i<as.length;i++)
     }
 }
 
-
-
-var pd1=0,pd2=0,pd3=0,pd4=0;
 // 判断姓名
 var formuser=document.getElementById("user");
 formuser.onfocus=function(){
