@@ -1,0 +1,79 @@
+/* 提交表 */
+.submit-form {
+    /* 大小设置 */
+    width: 420px;
+    /* 位置设置 */
+    margin: 0 auto;
+    margin-top: 120px;
+    padding-left: 100px;
+}
+
+/* 提交与重置按钮*/
+.button {
+    /* 文本设置 */
+    color: white;
+    font-size: 15px;
+    /* 大小设置 */
+    width: 60px;
+    /* 位置设置 */
+    position: relative;
+    left: 20%;
+    margin-right: 20px;
+    /* 背景设置 */
+    background-color: rgb(13, 17, 23);
+    /* 边框设置 */
+    border: 1px solid rgb(37, 45, 56);
+    border-radius: 5px;
+}
+
+/* 邮箱选择以及获取验证码按键*/
+.button-vtf,
+.select {
+    /* 大小设置 */
+    width: 120px;
+    height: 25px;
+    /* 文本设置 */
+    color: white;
+    /* 背景设置 */
+    background-color: rgb(33, 38, 45);
+    /* 边框设置 */
+    border: 1px solid rgb(37, 45, 56);
+    border-radius: 5px;
+}
+
+/* 邮箱选择界面 */
+.select {
+    /* 文本设置 */
+    font-size: 14px;
+    text-indent: 5px;
+}
+
+/* 提交输入框 */
+.input {
+    background-color: rgb(22, 27, 34);
+    color: white;
+    width: 200px;
+    height: 30px;
+    margin-bottom: 10px;
+    /* 边框设置 */
+    border: 1.5px solid rgb(37, 45, 56);
+    /* 设置圆角 */
+    border-radius: 15px;
+    /* 设置输入起点位置 */
+    text-indent: 10px;
+}
+
+/* 输入时输入框变色 */
+input:focus {
+    background-color: rgb(34, 41, 51);
+}
+
+/* label设置 */
+label {
+    /* 位置设置 */
+    margin-bottom: 10px;
+    /* 文本设置 */
+    font-weight: 600;
+    font-size: 20px;
+    text-shadow: 1px 1px rgb(157, 165, 172);
+}

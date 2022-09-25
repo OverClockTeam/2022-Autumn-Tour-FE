@@ -1,0 +1,33 @@
+/* 表格设置 */
+.table {
+    /* 大小设置 */
+    width: 600px;
+    /* 位置设置 */
+    margin: 0 auto;
+    margin-top: 120px;
+    /* 文本设置 */
+    table-layout: auto;
+    text-align: center;
+    /* 边框合并设置 */
+    border-collapse: collapse;
+}
+
+/* 表格下划线设置 */
+.table td,
+.table th {
+    /* 边框设置 */
+    border-bottom: 1px solid rgb(37, 45, 56);
+    /* 位置设置 */
+    padding: 12px 0;
+}
+
+/* 链接设置 */
+a {
+    /* 文本设置 */
+    color: rgb(88, 166, 218);
+    text-decoration: none;
+}
+a:hover {
+    /* 鼠标移动至链接变色 */
+    color: rgb(226, 186, 135);
+}
