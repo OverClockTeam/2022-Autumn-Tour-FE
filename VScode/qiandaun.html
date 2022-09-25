@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学生信息表</title>
+    <link rel="stylesheet" href="qianduan.css">
+</head>
+
+<body>
+    <!-- 无序列表 导航部分 -->
+    <div class="nav">
+        <ul>
+            <li class="word1">明德厚学 求是创新</li>
+            <li class="word2">
+                <h3>学生信息收集表</h3>
+            </li>
+            <li class="word3">Big Fox</li>
+        </ul>
+        <img src="touxiang.jpg" alt="">
+    </div>
+
+    <!-- 表单部分 -->
+    <div class="biaodan">
+        <form>
+            <div class="row1">
+                <label for="name">姓名：</label>
+                <input type="text" name="name" id="name" class="kuang">
+            </div>
+            <div class="row2">
+                <label for="old">年龄：</label>
+                <input type="number" name="old" id="old" class="kuang">
+            </div>
+            <div class="row3">
+                <label for="phone">电话：</label>
+                <input type="number" name="phone" id="phone" class="kuang">
+            </div>
+            <div class="row4">
+                <label for="mail">邮箱：</label>
+                <input type="text" name="e-mail" id="mail" class="kuang">
+            </div>
+            <div class="row5">
+                <input type="submit" class="button">
+            </div>
+        </form>
+    </div>
+
+    <!-- 表格部分 -->
+    <div class="biaoge">
+        <table>
+            <tr>
+                <th class="col1">姓名</th>
+                <th class="col2">年龄</th>
+                <th class="col3">电话</th>
+                <th class="col4">邮箱</th>
+                <th class="col5">操作</th>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>18</td>
+                <td>12345678901</td>
+                <td>hahaha@163.com</td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>19</td>
+                <td>10987654321</td>
+                <td>lalala@gmai.com</td>
+                <td><a href="#">删除</a></td>
+            </tr>
+            <tr>
+                <td>王五</td>
+                <td>18</td>
+                <td>16767676767</td>
+                <td>heiheihei@hust.edu.cn</td>
+                <td><a href="#">删除</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
