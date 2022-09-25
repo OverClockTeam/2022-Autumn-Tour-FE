@@ -1,0 +1,46 @@
+body{
+    font-family: "Lucida Console", "微软雅黑", monospace;
+}
+#nav{
+    position: relative; 
+    left: 25%;
+    height: 100px;
+}
+#nav li{
+    
+    float: left;
+    padding: 25px;
+    margin: 25px;
+    list-style: none;
+}
+#inputlist{
+    width: 300px;
+    position: relative; 
+    left: 40%;
+    margin: 2px;
+    padding: 10px;
+}
+#inputlist input{
+    border:2px solid rgb(37, 134, 195);
+    border-radius: 6px; 
+}
+.btn{
+    position: absolute;
+    left: 40%;
+}
+#inputlist div{
+    padding: 10px;
+    margin: 10px;
+}
+#show {
+    position: relative; 
+    left: 30%;
+    margin: 10px;
+}
+#show td, th{
+    padding: 10px;
+}
+#show a{
+    text-decoration:none;
+}
+
