@@ -1,0 +1,147 @@
+/* 清除内外边距 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* 导航部分 */
+/* 删除无序列表前面的点 */
+ul li {
+    list-style: none;
+}
+
+/* 设置导航部分的宽高 */
+.nav {
+    position: relative;
+    width: 700px;
+    height: 60px;
+    margin: 10px auto;
+}
+
+/* 设置li的内容 */
+.word1 {
+    position: relative;
+    color: skyblue;
+    font-size: 15px;
+    font-family: "楷体";
+}
+
+.word2 {
+    position: relative;
+    text-align: center;
+    top: -10px;
+}
+
+.word3 {
+    position: absolute;
+    right: 0%;
+    top: 25px;
+    color: red;
+    font-family: "宋体";
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* 设置图片大小和位置 */
+.nav img {
+    position: absolute;
+    right: 0%;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+/* 表单部分 */
+/* 表单水平居中 */
+.biaodan {
+    width: 500px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+/* 提交按钮居中 */
+.row5 {
+    text-align: center;
+}
+
+/* 设置输入框的颜色 */
+.kuang {
+    border-style: solid;
+    border-color: skyblue;
+}
+
+/* 信息输入框居中且之间有间距 */
+.row1,
+.row2,
+.row3,
+.row4,
+.row5 {
+    width: 230px;
+    margin: 5px auto;
+}
+
+/* 设置按钮的颜色 */
+.button {
+    background-color: skyblue;
+}
+
+/* 鼠标移至按钮时颜色发生变化 */
+.button:hover {
+    background-color: rgb(109, 109, 208);
+}
+
+/* 设置按钮和输入框的圆角 */
+.kuang {
+    border-radius: 10px;
+}
+
+.button {
+    border-radius: 5px;
+}
+
+/* 表格部分 */
+/* 设置表格大小和位置 */
+table {
+    width: 500px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+/* 删除“删除”按钮的下划线 */
+table a {
+    color: red;
+    text-decoration: none;
+}
+
+/* 表格内的元素居中 */
+table {
+    text-align: center;
+}
+
+/* 表格的下划线 */
+.biaoge table tr td {
+    border-width: 1px;
+    border-style: none none solid;
+    border-color: orange;
+}
+
+/* 设置每一列的宽度
+.col1 {
+    width: 100px;
+}
+
+.col2 {
+    width: 50px;
+}
+
+.col3 {
+    width: 50px;
+}
+
+.col4 {
+    width: 50px;
+}
+
+.col5 {
+    width: 50px;
+} */
