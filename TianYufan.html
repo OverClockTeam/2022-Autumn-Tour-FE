@@ -6,17 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>任务</title>
     <link rel="stylesheet" href="TianYufan.css">
+    <link rel="stylesheet" href="style.css">
     
 </head>
 <!-- 无序列表 -->
 <div class="shou">
     <ul>
         
-        <li class="bai">摆烂</li>
+        <li class="bai">你所热爱的，就是你的生活</li>
         <li>
-            <h1 class="shouji">学生信息收集表</h1>  <!--  class把字体变颜色 -->
+            <h1><div  class="shouji">学生信息收集表</div></h1>  <!--  class把字体变颜色 -->
         </li>
         <li class="image"></li>
+        <li class="zhenghuo"></li>
         <li class="tou"><h4>hankiid</h4></li>
     </ul>
 </div>
@@ -24,16 +26,18 @@
     <form action="#" methed="get" onsubmit="return false">
         <div class="inp">
         <!-- text 文本框 用户可以里面输入任何文字 -->
-        <label for="name">姓名:</label> <input type="text" name="username" id="pt1" >   <br>
-        <label for="age">年龄: </label><input type="number" name="age" id="pt2" >   <br>
-        <label for="tel">电话:</label> <input type="tel" name="tel" id="pt3">   <br>
-        <label for="youxiang">邮箱:</label> <input type="text" name="youxiang"  id="pt4" class="one">   <br>
+        <label for="name">姓名:</label> <input type="text" name="username" id="pt1" placeholder="请输入不大于10个字的中文"  >   <br> 
+        <span class="ti" id="tishi"></span>
+        <label for="age">年龄: </label><input type="number" name="age" id="pt2" placeholder="请输入数字" >   <br>
+        <label for="tel">电话:</label> <input type="tel" name="tel" id="pt3" placeholder="请输入长度为11的电话">   <br>
+        <label for="youxiang">邮箱:</label> <input type="text" name="youxiang"  id="pt4" class="one" placeholder="请输入正确的邮箱格式">   <br>
+        <span class="mail" id="tishi2"></span>
         <input type="submit" class="blueviolet" id="btn">
         </div>
     </form>
     <body>
 
-        <table>
+        <table >
             <!-- 名字整活儿用的 -->
             <thead><tr><th >姓名</th>        <th>年龄</th>       <th>电话</th>       <th >邮箱</th>   <th>操作</th>  </tr></thead>
          <tbody id="tbd">
@@ -42,6 +46,7 @@
             <tr><td>叶凉辰</td>   <td>23</td>  <td>17835232345</td>  <td>14325243691@qq.com</td>  <td id="shan3"><a href="javascript:void(0);">删除</a></td></tr>
         </tbody>
    </table>
+   <!-- href="javascript:void(0)，使a标签不跳转 -->
    <script src="TianYufan.js"></script>
 </body>
 </html>
