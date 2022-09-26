@@ -20,7 +20,7 @@
     left: 20%;
     margin-right: 20px;
     /* 背景设置 */
-    background-color: rgb(13, 17, 23);
+    background-color: rgb(33, 38, 45);
     /* 边框设置 */
     border: 1px solid rgb(37, 45, 56);
     border-radius: 5px;
@@ -60,7 +60,11 @@
     /* 设置圆角 */
     border-radius: 15px;
     /* 设置输入起点位置 */
-    text-indent: 10px;
+    text-indent: 20px;
+}
+
+.hint {
+    color: darkgrey;
 }
 
 /* 输入时输入框变色 */
@@ -76,4 +80,8 @@ label {
     font-weight: 600;
     font-size: 20px;
     text-shadow: 1px 1px rgb(157, 165, 172);
+}
+
+.warning {
+    border: 1.5px solid rgb(179, 70, 70);
 }

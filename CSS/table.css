@@ -12,6 +12,9 @@
     border-collapse: collapse;
 }
 
+.table thead {
+    background-color: rgb(24, 29, 36);
+}
 /* 表格下划线设置 */
 .table td,
 .table th {
@@ -30,4 +33,9 @@ a {
 a:hover {
     /* 鼠标移动至链接变色 */
     color: rgb(226, 186, 135);
+}
+
+/* 鼠标经过时变色 */
+.changeColor {
+    background-color: rgb(34, 41, 51);
 }
