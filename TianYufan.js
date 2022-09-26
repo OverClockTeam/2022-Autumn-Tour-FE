@@ -8,8 +8,10 @@ var shan2=document.getElementById('shan2');
 var shan3=document.getElementById('shan3');
 var tr=document.createElement('tr');
 var tbody=document.getElementById('tbd');
-var reg = /^[\u4e00-\u9fa5]{0,10}$/;
+var reg = /^[\u4e00-\u9fa5]{0,5}$/;
 var len=ipt1.length;
+var tishi=document.getElementById('tishi');
+var tishi2=document.getElementById('tishi2');
 var reg1=/^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
 // 判断输入
 bt1.onclick=function(){
@@ -19,9 +21,9 @@ bt1.onclick=function(){
         return;
     }
    
-    else if(len>10||!reg.test(ipt1.value))
+    else if(len>5||!reg.test(ipt1.value))
     {
-        alert("请输入个数不大于10的中文");
+        alert("请输入个数不大于5的中文");
     }
     else if(!reg1.test(ipt4.value))
     {
@@ -35,6 +37,29 @@ bt1.onclick=function(){
     }
 
 
+}
+// 判断姓名和邮箱的格式
+ipt1.onblur=function(){
+    if(ipt1.value==''||!reg.test(ipt1.value))
+    {
+        tishi.innerHTML="姓名格式不正确";
+    };
+}
+ipt4.onblur=function(){
+    if(!reg1.test(ipt4.value))
+    {
+        tishi2.innerHTML="邮箱格式不正确";
+    };
+    if(ipt4.value=='')
+    {
+        tishi2.innerHTML="邮箱不能为空";
+    }
+}
+ipt1.onfocus=function(){
+    tishi.innerHTML='';
+}
+ipt4.onfocus=function(){
+    tishi2.innerHTML='';
 }
 // 创建和删除新的表格行
 function gettd(name,age,tel,you){

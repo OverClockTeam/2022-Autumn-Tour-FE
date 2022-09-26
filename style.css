@@ -1,0 +1,7 @@
+body{
+    background:url("tu3.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+                -o-background-size: cover;                
+                background-size: cover;
+    background:rgba(0,0,0,0,3)
+}
