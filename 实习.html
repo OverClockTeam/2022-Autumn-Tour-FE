@@ -7,10 +7,10 @@
         <title>学生信息采集</title>
 
         <!-- CSS引入部分 -->
-        <link rel="stylesheet" href="CSS/style.css" />
-        <link rel="stylesheet" href="CSS/table.css" />
-        <link rel="stylesheet" href="CSS/nav.css" />
-        <link rel="stylesheet" href="CSS/form.css" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <link rel="stylesheet" href="./CSS/table.css" />
+        <link rel="stylesheet" href="./CSS/nav.css" />
+        <link rel="stylesheet" href="./CSS/form.css" />
     </head>
 
     <body>
@@ -28,7 +28,13 @@
         <div class="submit-form">
             <form method="get" name="收集表">
                 <label for="name">昵称：</label>
-                <input type="text" id="name" class="input" /> <br />
+                <input
+                    type="text"
+                    id="name"
+                    class="input hint"
+                    value="不超过十个字符"
+                />
+                <br />
 
                 <label for="age">年龄：</label>
                 <input type="number" id="age" class="input" /> <br />
@@ -38,12 +44,18 @@
                 <input
                     type="button"
                     value="获取短信验证码"
-                    class="button-vtf"
+                    class="button-vtf changeWhen"
                 />
                 <br />
 
                 <label for="email">邮箱：</label>
-                <input type="text" maxlength="20" id="email" class="input" />
+                <input
+                    type="text"
+                    maxlength="20"
+                    id="email"
+                    class="input hint"
+                    value="不可出现@符号"
+                />
                 <select class="select">
                     <option>@gmail.com</option>
                     <option>@qq.com</option>
@@ -52,8 +64,13 @@
                     <option selected="selected">@hust.edu.cn</option>
                 </select>
                 <br />
-                <input type="submit" class="button" />
-                <input type="reset" class="button" />
+                <input
+                    type="button"
+                    value="提交"
+                    id="submit"
+                    class="button changeWhen"
+                />
+                <input type="button" value="重置" class="button changeWhen" />
             </form>
         </div>
         <!-- 表格展示部分 -->
@@ -68,21 +85,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr class="changeWhen">
                     <td>kaaaasa</td>
                     <td>18</td>
                     <td>123456789001</td>
                     <td>hahaha@163.com</td>
                     <td><a href="">删除</a></td>
                 </tr>
-                <tr>
+                <tr class="changeWhen">
                     <td>Jamren</td>
                     <td>19</td>
                     <td>123412341234</td>
                     <td>lalala@gmail.com</td>
                     <td><a href="">删除</a></td>
                 </tr>
-                <tr>
+                <tr class="changeWhen">
                     <td>FeiJu</td>
                     <td>18</td>
                     <td>234523452345</td>
@@ -91,5 +108,6 @@
                 </tr>
             </tbody>
         </table>
+        <script type="text/javascript" src="./function.js"></script>
     </body>
 </html>
