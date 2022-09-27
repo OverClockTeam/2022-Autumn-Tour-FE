@@ -41,9 +41,10 @@ form {
 input[type=text] {
     width: 160px;
     margin: 6px 0px;
-    border: black 1px solid;
+    border: white 1px solid;
     padding: 8px 8px;
     border-radius: 18px;
+    font-size: 15px;
     transition: width 0.4s ease-in-out;
     opacity: 0.5;
 }
@@ -95,6 +96,7 @@ body {
     background-image: url(images/ba12.png);
     animation-timing-function: linear;
     background-size: cover;
+    background-attachment: scroll;
 }
 
 @keyframes body {
