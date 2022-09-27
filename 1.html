@@ -7,6 +7,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>学生信息收集表</title>
     <link rel="stylesheet" href="2.css">
+    <script>
+        //姓名长度限制
+        checkLength = function (dom, maxLength) {
+            var l = 0;
+            for (var i = 1; i < dom.value.length; i++) {
+                if (/[\u4e00-\u9fa5]/.test(dom.value[i])) {
+                    l += 2;
+                } else {
+                    l++;
+                }
+                if (l > maxLength) {
+                    alert("最大长度10")
+                    dom.value = dom.value.substr(0, i);
+                }
+            }
+        }
+        //表单提交,判断邮箱格式
+        function submitTable() {
+            var name = document.getElementById("xingming").value;
+            var age = document.getElementById("nianling").value;
+            var pnumber = document.getElementById("dianhua").value;
+            var mail = document.getElementById("youxiang").value;
+            row = document.getElementById("table").insertRow();
+            if (pnumber.length != 11) {
+                alert("电话格式错误");
+                return false;
+            } else
+                if (mail.split("@").length == 1) {
+                    alert("邮箱地址必须包含@");
+                    return false;
+                } else
+                    if (mail.split("@").length >= 3) {
+                        alert("邮箱地址只能包含一个@");
+                        return false;
+                    } else
+                        if (row != null) {
+                            cell = row.insertCell();
+                            cell.innerHTML = name;
+                            cell = row.insertCell();
+                            cell.innerHTML = age;
+                            cell = row.insertCell();
+                            cell.innerHTML = pnumber;
+                            cell = row.insertCell();
+                            cell.innerHTML = mail;
+                            cell = row.insertCell();
+                            cell.innerHTML = "删除";
+                        }
+            return false;
+        }
+        //删除操作
+        function deleteRow(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("table").deleteRow(i);
+        }
+    </script>
 </head>
 
 <body>
@@ -18,19 +73,20 @@
 
     </ul>
     <div>
-        <form>
+        <form onsubmit="return submitTable()" id="form">
             <label for="xingming" class="inf"> 姓名： </label>
-            <input type="text" name="name" id="xingming" /> <br />
+            <input type="text" name="name" id="xingming" onkeyup="checkLength(this,18)" required /> <br />
+            <div id="promptInfo"></div>
             <label for="nianling" class="inf"> 年龄： </label>
-            <input type="text" name="age" id="nianling" /> <br />
+            <input type="text" oninput="value=value.replace(/[^\d]/g,'')" name="age" id="nianling" required /> <br />
             <label for="dianhua"> 电话： </label>
-            <input type="text" name="phone" id="dianhua" /> <br />
+            <input type="text" oninput="value=value.replace(/[^\d]/g,'')" name="phone" id="dianhua" required /> <br />
             <label for="youxiang"> 邮箱： </label>
-            <input type="text" name="mail" id="youxiang" /> <br />
-            <input type="submit">
+            <input type="text" name="mail" id="youxiang" required /> <br />
+            <input name="submit" type="submit" id="submit" value="提交">
         </form>
     </div>
-    <table cellspacing="0">
+    <table cellspacing="0" id="table">
         <thead>
             <tr>
                 <th> 姓名 </th>
@@ -46,21 +102,21 @@
                 <td> 18 </td>
                 <td> 16732789844 </td>
                 <td> cod@hh.com </td>
-                <td><a href="#"> 删除 </a></td>
+                <td><a href="#" onclick="deleteRow(this)"> 删除 </a></td>
             </tr>
             <tr>
                 <td> 李四 </td>
                 <td> 19 </td>
                 <td> 14567893456 </td>
                 <td> 996@hh.com </td>
-                <td> <a href="#"> 删除 </a> </td>
+                <td> <a href="#" onclick="deleteRow(this)"> 删除 </a> </td>
             </tr>
             <tr>
                 <td> 王五 </td>
                 <td> 20 </td>
                 <td> 12905614532 </td>
                 <td> nice@qq.com </td>
-                <td> <a href="#"> 删除 </a> </td>
+                <td> <a href="#" onclick="deleteRow(this)"> 删除 </a> </td>
             </tr>
         </tbody>
     </table>
