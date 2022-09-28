@@ -1,33 +1,36 @@
 // 设置输入提示
-var getName = document.getElementById("name");
-console.log(getName);
-// 事件获得焦点时，提示消失
-getName.onfocus = function () {
-    if (getName.value == "不超过十个字符") {
-        this.value = "";
-    }
-    this.style.color = "white";
-};
-// 事件失去焦点时，判断是否恢复提示
-getName.onblur = function () {
-    if (getName.value == "") {
-        this.value = "不超过十个字符";
-        this.style.color = "darkgrey";
-    }
-};
+var hints = [
+    "不超过十个字符",
+    "请输入整数",
+    "请输入11位电话号码",
+    "不可出现@字符",
+];
+var inputs = document.getElementsByClassName("input");
+for (var i = 0; i < inputs.length; i++) {
+    inputs[i].onfocus = function () {
+        var index = this.getAttribute("index");
+        if (this.value == hints[Number(index)]) {
+            this.value = "";
+        }
+        this.style.color = "white";
+        console.log(index);
+        console.log(hints[index]);
+        this.classList.remove("warning");
+    };
+    // 事件失去焦点时，判断是否恢复提示
+    inputs[i].onblur = function () {
+        var index = this.getAttribute("index");
+        if (this.value == "") {
+            this.value = hints[Number(index)];
+            this.style.color = "darkgrey";
+        }
+    };
+}
 
-var email = document.getElementById("email");
-console.log("hh");
-email.onfocus = function () {
-    if (email.value == "不可出现@符号") {
-        this.value = "";
-    }
-    this.style.color = "white";
-};
-email.onblur = function () {
-    if (email.value == "") {
-        this.value = "不可出现@符号";
-        this.style.color = "darkgrey";
+var reset = document.getElementById("reset");
+reset.onclick = function () {
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].style.color = "darkgrey";
     }
 };
 
@@ -65,4 +68,55 @@ submit.onclick = function () {
             break;
         }
     }
+    var phoneNumber = document.getElementById("tel");
+    var cnt = phoneNumber.value;
+    if (cnt.length != 11) {
+        phoneNumber.classList.add("warning");
+        alert("您输入的电话号码不符合规范，请重新输入");
+        flag = 0;
+    }
+    // 符合要求提交：
+    if (flag) {
+        // 创建新行
+        var tr = document.createElement("tr");
+        tr.classList.add("changeWhen");
+        var inputs = document.getElementsByClassName("input");
+        // 获取选择的邮箱
+        var select = document.getElementById("emailName");
+        var index = select.selectedIndex;
+        var e = select.options[index].innerText;
+        // 添加新行
+        for (var i = 0; i < inputs.length; i++) {
+            var td = document.createElement("td");
+            td.innerText = inputs[i].value;
+            if (i == 3) {
+                td.innerText += e;
+            }
+            tr.appendChild(td);
+        }
+        // 添加删除链接
+        var td = document.createElement("td");
+        var a = document.createElement("a");
+        a.href = "javascript:;";
+        a.innerText = "删除";
+        td.appendChild(a);
+        tr.appendChild(td);
+        var tbody = document.getElementById("tbody");
+        tbody.appendChild(tr);
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].value = hints[i];
+            inputs[i].style.color = "darkgrey";
+        }
+    }
 };
+
+// 删除设置
+var tbody = document.getElementById("tbody");
+var del = tbody.querySelectorAll("a");
+for (var i = 0; i < del.length; i++) {
+    del[i].onclick = function () {
+        var confirmDelete = confirm("确认删除？");
+        var tr = this.parentNode.parentNode;
+        tbody.removeChild(tr);
+    };
+}

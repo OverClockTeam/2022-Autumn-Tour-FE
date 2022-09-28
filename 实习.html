@@ -31,16 +31,31 @@
                 <input
                     type="text"
                     id="name"
-                    class="input hint"
+                    class="input"
                     value="不超过十个字符"
+                    index="0"
                 />
                 <br />
 
                 <label for="age">年龄：</label>
-                <input type="number" id="age" class="input" /> <br />
+                <input
+                    type="text"
+                    id="age"
+                    class="input"
+                    value="请输入整数"
+                    index="1"
+                />
+                <br />
 
                 <label for="tel">电话：</label>
-                <input type="tel" maxlength="11" id="tel" class="input" />
+                <input
+                    type="tel"
+                    maxlength="11"
+                    id="tel"
+                    class="input"
+                    value="请输入11位电话号码"
+                    index="2"
+                />
                 <input
                     type="button"
                     value="获取短信验证码"
@@ -53,10 +68,11 @@
                     type="text"
                     maxlength="20"
                     id="email"
-                    class="input hint"
-                    value="不可出现@符号"
+                    class="input"
+                    value="不可出现@字符"
+                    index="3"
                 />
-                <select class="select">
+                <select class="select" id="emailName">
                     <option>@gmail.com</option>
                     <option>@qq.com</option>
                     <option>@sina.com</option>
@@ -70,41 +86,41 @@
                     id="submit"
                     class="button changeWhen"
                 />
-                <input type="button" value="重置" class="button changeWhen" />
+                <input type="reset" id="reset" class="button changeWhen" />
             </form>
         </div>
         <!-- 表格展示部分 -->
         <table class="table">
             <thead>
                 <tr>
-                    <th>昵称</th>
-                    <th>年龄</th>
-                    <th>电话</th>
-                    <th>邮箱</th>
-                    <th>操作</th>
+                    <th id="userName">昵称</th>
+                    <th id="userAge">年龄</th>
+                    <th id="userPhoneNumber">电话</th>
+                    <th id="userEmailAddress">邮箱</th>
+                    <th id="deleteUser">操作</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
                 <tr class="changeWhen">
                     <td>kaaaasa</td>
                     <td>18</td>
                     <td>123456789001</td>
                     <td>hahaha@163.com</td>
-                    <td><a href="">删除</a></td>
+                    <td><a href="JavaScript:;">删除</a></td>
                 </tr>
                 <tr class="changeWhen">
                     <td>Jamren</td>
                     <td>19</td>
                     <td>123412341234</td>
                     <td>lalala@gmail.com</td>
-                    <td><a href="">删除</a></td>
+                    <td><a href="JavaScript:;">删除</a></td>
                 </tr>
                 <tr class="changeWhen">
                     <td>FeiJu</td>
                     <td>18</td>
                     <td>234523452345</td>
-                    <td>heiheihei@hust.edu.cn</td>
-                    <td><a href="">删除</a></td>
+                    <td>hhhhhhh@hust.edu.cn</td>
+                    <td><a href="JavaScript:;">删除</a></td>
                 </tr>
             </tbody>
         </table>
