@@ -116,6 +116,7 @@ tr,th,td{
     border-color:#98acbb;
     /* border-width:1px; */
     text-align:center;
+    height:30px;
 }
 
 /* 每一列根据盒子宽度而调整宽度 */
