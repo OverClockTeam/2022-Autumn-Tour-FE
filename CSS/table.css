@@ -6,10 +6,22 @@
     margin: 0 auto;
     margin-top: 120px;
     /* 文本设置 */
-    table-layout: auto;
     text-align: center;
     /* 边框合并设置 */
     border-collapse: collapse;
+    /* 表格宽度设置 */
+    table-layout: fixed;
+}
+#userName {
+    width: 80px;
+}
+
+#userAge {
+    width: 60px;
+}
+
+#deleteUser {
+    width: 60px;
 }
 
 .table thead {

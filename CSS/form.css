@@ -51,7 +51,7 @@
 /* 提交输入框 */
 .input {
     background-color: rgb(22, 27, 34);
-    color: white;
+    color: darkgrey;
     width: 200px;
     height: 30px;
     margin-bottom: 10px;
@@ -61,10 +61,6 @@
     border-radius: 15px;
     /* 设置输入起点位置 */
     text-indent: 20px;
-}
-
-.hint {
-    color: darkgrey;
 }
 
 /* 输入时输入框变色 */
