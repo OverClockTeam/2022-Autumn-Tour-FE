@@ -54,6 +54,20 @@ input[type=text]:focus {
     width: 200px;
 }
 
+.div1 {
+    position: absolute;
+    top: 152px;
+    right: 456px;
+    color: rgb(6, 50, 183);
+}
+
+.div2 {
+    position: absolute;
+    right: 443px;
+    color: rgb(6, 50, 183);
+    top: 295px;
+}
+
 input[type=submit] {
     width: 80px;
     margin: 12px 0px;
