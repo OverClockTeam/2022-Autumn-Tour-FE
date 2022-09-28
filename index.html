@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link href="style\styles.css" rel="stylesheet">
+    <div class="collection">
+    <!--nav 导航部分-->
+    <div class="headth"><nav>
+        <ul>
+            <li>
+                🌹早上好我的美丽佳人！
+            </li>
+            <li>
+                <h1><img src="images/x1.png" class="cha" width="20px">学生信息收集表</h1>
+            </li>
+            <li>
+                早起只为了等你🌹
+            </li>
+        </ul>
+    </nav></div>
+    <!--收集表-->
+    <div class="colle-input"><form class="colle-inputlist">
+       <label for="text">姓名：</label><input type="text" class="colle-inputer" id="inputname" oninput="nameof()"  value=""  @compositionstart="onCompositionStart" @compositionend="onCompositionEnd"><br>
+       <label for="text">年龄：</label><input type="number" class="colle-inputer" id="inputage" min="0"><br>
+       <label for="text">电话：</label><input type="text" class="colle-inputer" id="inputtel" maxlength="11"><br>
+       <label for="text">邮箱：</label><input type="text" class="colle-inputer" id="inputmail" oninput="mailadd()" value=""><br>
+       <input type="button" value="提交" id="submit" class="colle-inputer" onclick="anywr()">
+    </form></div>
+    </div>
+    <!--信息展示-->
+    <div class="table"><table>
+        <thead><tr>
+                <th class="tblock"><label for="text">姓名</label></th>
+                <th class="tblock"><label for="text">年龄</label></th>
+                <th class="tblock"><label for="text">电话</label></th>
+                <th class="tblock"><label for="text">邮箱</label></th>
+                <th class="tblock"><label for="text">操作</label></th>
+            </tr>
+        </thead>
+        <tbody id="tbody">
+            <tr>
+                <td class="tblock name"><label for="text">尼古拉斯赵四</label></td>
+                <td class="tblock age"><label for="number">20</label></td>
+                <td class="tblock tel"><label for="text">13977935678</label></td>
+                <td class="tblock mail"><label for="text">qwq5678@qq.com</label></td>
+                <td class="tblock deletebot" onclick="deletetr(this)"><label for="text">删除</label></td>
+            </tr>
+            <tr>
+                <td class="tblock name"><label for="text">爱新觉罗张三阿巴阿巴</label></td>
+                <td class="tblock age"><label for="number">22</label></td>
+                <td class="tblock tel"><label for="text">13877910987</label></td>
+                <td class="tblock mail"><label for="text">tat5678@qq.com</label></td>
+                <td class="tblock deletebot" onclick="deletetr(this)"><label for="text">删除</label></td>
+            </tr>
+            <tr>
+                <td class="tblock name"><label for="text">阿米娅</label></td>
+                <td class="tblock age"><label for="number">18</label></td>
+                <td class="tblock tel"><label for="text">13677910909</label></td>
+                <td class="tblock mail"><label for="text">rds3year@qq.com</label></td>
+                <td class="tblock deletebot" onclick="deletetr(this)"><label for="text">删除</label></td>
+            </tr>
+        </tbody>
+    </table></div>
+
+    <script>
+        //todo:点击删除按钮，删除数据
+        function deletetr(ele){
+            ele.parentNode.parentNode.removeChild(ele.parentNode);
+        }
+
+        //todo:判断输入姓名是否超过十个字，弹出提示
+        flag = 1;
+        function nameof(){
+            var seimei = document.getElementById("inputname");
+            seimei.addEventListener('compositionstart', function() {
+           flag=1;
+        }); 
+            
+            seimei.addEventListener('compositionend', function(event) {
+            if((seimei.value.length > 10)&&(flag==1)){
+                flag=0;
+                alert('姓名超过十个字！');
+            }
+        });
+    }    
+        
+        //todo:判断邮箱格式是否正确
+        function mailadd(){
+            var meeru = document.getElementById("inputmail").value;
+            var aword = 0;
+            var pot = 0;
+            for(let i =0 ;i < meeru.length ; i++){
+                if(meeru[i] == '@'){
+                    aword += 1;
+                }
+                else if(meeru[i] == '.'){
+                    pot += 1;
+                }
+            }
+            if((aword > 1)||((aword < 1)&&(pot > 0))){
+                alert('邮箱格式有误！');
+            }
+        }
+        //todo:点击提交时，检测各输入是否有误，并进行反馈
+        function anywr(){
+            var warnning = false;
+            var seimei = document.getElementById("inputname");
+            var nenrei = document.getElementById("inputage")
+            var ketai = document.getElementById("inputtel");
+            var meeru = document.getElementById("inputmail");
+            var alp=/[a-zA-Z]/g;
+            var num=/[0-9]/g;
+
+            //name
+            if(seimei.value.length > 10){
+                alert('姓名超过十个字！');
+                warnning = true;
+            }
+            else if(seimei.value.length < 1){
+                alert('请输入姓名！');
+                warnning = true;
+            }
+            for(let i=0;i<seimei.value.length;i++){
+                if(alp.test(seimei.value[i])||num.test(seimei.value[i])){
+                    alert('请输入中文姓名！');
+                    warnning = true;
+                    break;
+                }
+            }
+        
+            //tel
+            if(ketai.value.length!=11){
+                alert('电话号码长度不正确！');
+                warnning = true;
+            }
+            for(let i=0;i<11;i++){
+                if(alp.test(ketai.value[i])){
+                    alert('请输入正确的电话号码！');
+                    warnning = true;
+                    break;
+                }
+            }
+
+            //mail
+            var aword = 0;
+            var pot = 0;
+            for(let i =0 ;i < meeru.value.length ; i++){
+                if(meeru.value[i] == '@'){
+                    aword += 1;
+                }
+                else if(meeru.value[i] == '.'){
+                    pot += 1;
+                }
+            }
+            if((aword > 1)||((aword < 1)&&(pot > 0))||((aword < 1)&&(pot < 1))){
+                alert('邮箱格式有误！');
+                warnning = true;
+            }
+
+            //todo：生成新节点
+            if(warnning==false){
+                var boxy = document.getElementById("tbody");
+                var newrow = document.createElement("tr");
+                newrow.innerHTML+='<td class="tblock name"><label for="text">'+seimei.value+'</label></td><td class="tblock age"><label for="number">'+nenrei.value+'</label></td><td class="tblock tel"><label for="text">'+ketai.value+'</label></td><td class="tblock mail"><label for="text">'+meeru.value+'</label></td><td class="tblock deletebot" onclick="deletetr(this)"><label for="text">删除</label></td>';
+                boxy.appendChild(newrow);
+            }
+        
+        }
+
+        
+    </script>
+</body>
+</html>

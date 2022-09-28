@@ -1,0 +1,80 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(247, 244, 240);
+  }
+h1{
+    text-align: center;
+}
+ul {
+    position: relative;
+    right: 45px;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+.collection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.headth{
+    position: relative;
+}
+.colle-input{
+    display: flex;
+    text-align:center;
+
+}
+.colle-inputer{
+   margin-bottom: 12px;
+   border-style:groove;
+   border-width: 1px;
+   border-color: #010e99;
+   border-radius: 5px;
+}
+table {
+    display: table;
+    position: static;
+    width: 850px;
+    height: auto;
+    text-align:center;
+    table-layout: fixed;
+    border-collapse: collapse;
+    
+}
+thead{
+   color: #0e750e;
+}
+
+td{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color: #010e99;
+    overflow:auto;
+    height: 30px;
+}
+#submit{
+    background-color: #0e750e;
+    color: #fff;
+    border-radius: 10px;
+    width: 60px;
+    cursor:pointer;
+}
+
+.deletebot :hover {
+    cursor:pointer;
+    color: #af0d1a;
+}
+.cha{
+    position:static;
+}
+.tblock{
+    overflow-x: auto;
+    padding-bottom: 1px;
+}
