@@ -66,13 +66,13 @@
         <li class="left">键盘敲烂 收入过万</li>
         <li class="right">ZhaoYu</li>
         <li class="center">学生信息收集表</li>
-
     </ul>
     <div>
         <form onsubmit="return submitTable()" id="form">
             <label for="xingming" class="inf"> 姓名： </label>
-            <input type="text" name="name" id="xingming" maxLength="10" onkeyup="judgeName(this,maxLength,'div1')"
-                required /> <br />
+            <input type="text" name="name" id="xingming" maxLength="10"
+                onkeyup="value=value.replace(/[^\u4e00-\u9fa5]/g,''),judgeName(this,maxLength,'div1')" required />
+            <br />
             <div class="div1" id="div1"></div>
             <label for="nianling" class="inf"> 年龄： </label>
             <input type="text" oninput="value=value.replace(/[^\d]/g,'')" name="age" id="nianling" required /> <br />
