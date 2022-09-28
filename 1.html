@@ -8,20 +8,16 @@
     <title>学生信息收集表</title>
     <link rel="stylesheet" href="2.css">
     <script>
-        //姓名长度限制
-        checkLength = function (dom, maxLength) {
-            var l = 0;
-            for (var i = 1; i < dom.value.length; i++) {
-                if (/[\u4e00-\u9fa5]/.test(dom.value[i])) {
-                    l += 2;
-                } else {
-                    l++;
-                }
-                if (l > maxLength) {
-                    alert("最大长度10")
-                    dom.value = dom.value.substr(0, i);
-                }
+        //姓名长度提示
+        function judgeName(obj, maxLength, id) {
+            var rem = maxLength - obj.value.length;
+            if (rem < 0) {
+                rem = 0;
             }
+            document.getElementById(id).innerHTML = "还可以输入" + rem + "个字";
+        }
+        function showTip(id) {
+            document.getElementById(id).innerHTML = "邮箱格式需要包含@";
         }
         //表单提交,判断邮箱格式
         function submitTable() {
@@ -52,7 +48,7 @@
                             cell = row.insertCell();
                             cell.innerHTML = mail;
                             cell = row.insertCell();
-                            cell.innerHTML = "删除";
+                            cell.innerHTML = "<a href='#' onclick='deleteRow(this)'>删除</a>";
                         }
             return false;
         }
@@ -75,14 +71,16 @@
     <div>
         <form onsubmit="return submitTable()" id="form">
             <label for="xingming" class="inf"> 姓名： </label>
-            <input type="text" name="name" id="xingming" onkeyup="checkLength(this,18)" required /> <br />
-            <div id="promptInfo"></div>
+            <input type="text" name="name" id="xingming" maxLength="10" onkeyup="judgeName(this,maxLength,'div1')"
+                required /> <br />
+            <div class="div1" id="div1"></div>
             <label for="nianling" class="inf"> 年龄： </label>
             <input type="text" oninput="value=value.replace(/[^\d]/g,'')" name="age" id="nianling" required /> <br />
             <label for="dianhua"> 电话： </label>
             <input type="text" oninput="value=value.replace(/[^\d]/g,'')" name="phone" id="dianhua" required /> <br />
             <label for="youxiang"> 邮箱： </label>
-            <input type="text" name="mail" id="youxiang" required /> <br />
+            <input type="text" name="mail" id="youxiang" onkeyup="showTip('div2')" required /> <br />
+            <div class="div2" id="div2"></div>
             <input name="submit" type="submit" id="submit" value="提交">
         </form>
     </div>
