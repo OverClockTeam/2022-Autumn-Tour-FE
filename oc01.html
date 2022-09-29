@@ -1,36 +1,57 @@
 <html>
-    <head>
-        <title> oc01 </title>
-        <link rel="stylesheet" type="text/css" href="oc01.css">
-        <script src="oc01.js" type="text/javascript"></script>
-    </head>
-    <body>
-        
-        <ul id="nav">
-            
-            <li id="slogan">SLOGAN</li>
-            <li id="title">学生信息收集</li>
-            <li id="info">User Info</li>
-        </ul>
 
-        <form id="inputlist">
-            <div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> oc01 </title>
+    <link rel="stylesheet" type="text/css" href="oc01.css">
+
+</head>
+
+<body>
+    <div id="top"></div>
+    <ul id="nav">
+
+        <li id="slogan"> A Slogan 🥳</li>
+        <li id="title">学生信息收集</li>
+        <li id="info">
+            <img src="Head.jpg">
+            <p>DING Ziao</p>
+        </li>
+    </ul>
+
+    <form id="inputlist">
+        <div>
             <label for="name">姓名 :</label>
-            <input type="text" name="name" id="name"><br></div>
-            <div>
-            <label for="age">年龄 :</label>
-            <input type="number" name="age" id="age"><br></div>
-            <div>
-            <label for="tel">电话 :</label>
-            <input type="tel" name="tel" id="tel"><br></div>
-            <div>
-            <label for="email">邮箱 :</label>
-            <input type="text" name="email" id="email"><br></div>
-            <div>
-            <input class="btn" type="submit" value="submit"></div>
-        </form>
+            <input type="text" name="name" id="name"><br>
+            <span id="namealert"></span>
+        </div>
 
-        <table  id="show">
+        <div>
+            <label for="age">年龄 :</label>
+            <input type="number" name="age" id="age"><br>
+            <span id="agealert"></span>
+        </div>
+        <div>
+            <label for="tel">电话 :</label>
+            <input type="tel" name="tel" id="tel"><br>
+            <span id="telalert"></span>
+        </div>
+        <div>
+            <label for="email">邮箱 :</label>
+            <input type="text" name="email" id="email"><br>
+            <span id="emailalert"></span>
+        </div>
+
+        <div>
+            <button class="btn" type="button">submit</button>
+            <span id="submitalert"></span>
+        </div>
+    </form>
+
+    <table id="show">
+        <thead>
             <tr>
                 <th>姓名</th>
                 <th>年龄</th>
@@ -38,27 +59,32 @@
                 <th>邮箱</th>
                 <th>操作</th>
             </tr>
+        </thead>
+        <tbody>
             <tr>
                 <td>张三</td>
                 <td>18</td>
                 <td>12345678910</td>
                 <td>zs@gmail.com</td>
-                <td><a href="">delete</a></td>
+                <td><a href="javascript:;">delete</a></td>
             </tr>
             <tr>
                 <td>李四</td>
                 <td>19</td>
                 <td>12345678910</td>
                 <td>ls@gmail.com</td>
-                <td><a href="">delete</a></td>
+                <td><a href="javascript:;">delete</a></td>
             </tr>
             <tr>
                 <td>王五</td>
                 <td>20</td>
                 <td>12345678910</td>
                 <td>ww@gmail.com</td>
-                <td><a href="">delete</a></td>
+                <td><a href="javascript:;">delete</a></td>
             </tr>
-        </table>
-    </body>
+        </tbody>
+    </table>
+    <script src="oc01.js" type="text/javascript"></script>
+</body>
+
 </html>
