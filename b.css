@@ -3,14 +3,17 @@
     margin:0;
 }
 /* 清除内外边距 */
-
+body{
+    height: 800px;
+}
 .wrap{
     position: relative;
-    height:589px;
+    height:100%;
     width:814px;
     background-color: rgb(10, 1, 26);
     margin: 0 auto;
     border-radius: 20px;
+    padding-bottom: 10px;
 }
 
 .header{
@@ -88,21 +91,24 @@ button{
 
 
 table{
-    height : 185px;
+    /* height : 185px; */
     width : 573px;
     margin-left: 129px;
 }
 
+tr{
+    height: 44px;
+}
 th{
     border-bottom: 1px solid #fff;
 }
 
- td{
+td{
     text-align: center;
     height : 44px;
     line-height: 44px;
     border-bottom: 1px solid #fff;
-
+    
  }
 
  
@@ -111,8 +117,9 @@ th{
     display: inline-block;
     height: 44px;
     line-height: 44px;
-    width :69.59px;
     color :#fff;
+    text-align: center;
+    width: 100%;
  }
 
  a:hover{
@@ -128,6 +135,7 @@ button:hover{
     position :relative;
     left: 685px;
     top : -20px;
+    border-radius: 50%;
 }
 
 .font_color{
