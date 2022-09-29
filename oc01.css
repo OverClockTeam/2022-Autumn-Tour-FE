@@ -1,46 +1,105 @@
-body{
+body {
     font-family: "Lucida Console", "微软雅黑", monospace;
+    background-color: #f3f3f358;
 }
-#nav{
-    position: relative; 
-    left: 25%;
-    height: 100px;
+
+#nav {
+    margin: 0em;
+    position: relative;
+    height: 90px;
+    background-color: white;
+    border-bottom: 1px solid #38394D;
 }
-#nav li{
-    
+
+#top {
+    height: 30px;
+    background-color: #38394D;
+}
+
+#nav li {
     float: left;
-    padding: 25px;
-    margin: 25px;
     list-style: none;
 }
-#inputlist{
-    width: 300px;
-    position: relative; 
-    left: 40%;
+
+#title {
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    font-size: 120%;
+}
+
+#slogan {
+    top: 40%;
+    position: absolute;
+    left: 20%;
+
+}
+
+#info {
+    top: 20%;
+    position: absolute;
+    right: 15%;
+}
+
+p {
     margin: 2px;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    left: 20px;
+}
+
+#inputlist {
+    width: 300px;
+    position: relative;
+    left: 37%;
+    margin-top: 2px;
+    margin-bottom: 40px;
     padding: 10px;
 }
-#inputlist input{
-    border:2px solid rgb(37, 134, 195);
-    border-radius: 6px; 
+
+#inputlist input {
+    border: 2px solid rgb(37, 134, 195);
+    border-radius: 6px;
 }
-.btn{
+
+.btn {
     position: absolute;
     left: 40%;
 }
-#inputlist div{
-    padding: 10px;
-    margin: 10px;
-}
-#show {
-    position: relative; 
-    left: 30%;
-    margin: 10px;
-}
-#show td, th{
-    padding: 10px;
-}
-#show a{
-    text-decoration:none;
+
+#inputlist div {
+    padding: 8px;
+    margin: 8px;
 }
 
+#inputlist span {
+    margin: 5px;
+    font-size: 80%;
+    position: absolute;
+    left: 30%;
+}
+
+#show {
+    position: relative;
+    left: 30%;
+    margin: 10px;
+    border-collapse: collapse;
+}
+
+#show tr {
+    border-bottom: 1px solid rgb(37, 134, 195);
+}
+
+#show td,
+th {
+    padding: 10px;
+}
+
+#show a {
+    text-decoration: none;
+}
