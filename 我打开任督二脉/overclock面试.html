@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>
+   学生信息收集
+</title>
+
+<script>
+   function attentionone()
+   {
+     var x=document.getElementById("telnumber").value;
+     if(x==""||isNaN(x))
+     {
+       window.alert("不是数字哦")
+     }
+   }  
+</script>
+<script>
+   function attentiontwo()
+   {
+     var x=document.getElementById("telnumber").value;
+     if( ??)
+     {
+       window.alert("不是邮箱哦")
+     }
+   }  
+</script>
+<style>
+  body{
+   background-color:#d0e4fe;
+  }
+  ul{
+   text-align:center;
+   background-color:goldenrod;
+   font-size: 22px;
+  }
+ 
+</style>
+
+<body>
+   
+   <ul>
+    <li>欢迎来到1037号森林大学 </li>
+    <li style="font: size 30px;">这是一个学生信息收集表</li>
+    <li>我们将保证您的信息安全</li>
+   </ul>
+
+  
+  
+   <form name="input" action="overclock面试.html" method="get"> 
+    <labor for="name">姓名</labor>
+    <input type="text" name="user" id="name">
+    <br>
+    性别:
+    <br>
+    <label for="male">&nbsp男</label>
+    <input type="radio" name="sex" id="male" />
+    <br>
+    <label for="female">&nbsp女</label>
+    <input type="radio" name="sex" id="female" />
+    <br>
+    <labor for="agenumber">年龄</labor>
+    <input type="number" name="age" id="agenumber">
+    <br>
+    <labor for="telnumber">电话</labor>
+    <input type="text" name="tel" id="telnumber">
+    <br>
+    <labor for="email">邮箱</labor>
+    <input type="text" name="emaildata" id="email">
+    <br>
+    <input type="submit" value="提交" onclick="attentionone()">
+   </form>
+
+
+
+   <table border="0">
+    <thead>
+     <tr>
+       <th>姓名</th>
+       <th>性别</th>
+       <th>年龄</th>
+       <th>电话</th>
+       <th>邮箱</th>
+       <th>操作</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+        <td>张三 </td> 
+        <td>男</td>
+        <td>18</td>
+        <td>12345678901</td>
+        <td>123456@qq.com</td>
+        <td>删除</td>
+     </tr>
+     <tr>
+        <td>李四</td>
+        <td>男</td>
+        <td>19</td>
+        <td>11111111010</td>
+        <td>nibaba@163.com</td>
+        <td>删除</td>
+     </tr>
+     <tr>
+        <td>王五</td>
+        <td>女</td>
+        <td>20</td>
+        <td>18101450234</td>
+        <td>mahuateng@qq.com</td>
+        <td>删除</td>
+     </tr>
+    </tbody>
+
+   </table>
+</li>
+</body>
