@@ -54,7 +54,7 @@ ul li {
 /* 表单部分 */
 /* 表单水平居中 */
 .biaodan {
-    width: 500px;
+    width: 600px;
     height: 150px;
     margin: 10px auto;
 }
@@ -64,10 +64,21 @@ ul li {
     text-align: center;
 }
 
-/* 设置输入框的颜色 */
+/* 设置输入框的颜色和宽度 */
 .kuang {
+    width: 280px;
     border-style: solid;
     border-color: skyblue;
+    font-size: 10px;
+    font-family: "楷体";
+    color: #999;
+}
+
+
+/* 设置输入框的背景颜色 */
+input:focus {
+    background-color: yellow;
+    outline: none;
 }
 
 /* 信息输入框居中且之间有间距 */
@@ -76,7 +87,7 @@ ul li {
 .row3,
 .row4,
 .row5 {
-    width: 230px;
+    width: 400px;
     margin: 5px auto;
 }
 
@@ -96,6 +107,7 @@ ul li {
 }
 
 .button {
+    width: 50px;
     border-radius: 5px;
 }
 
@@ -103,7 +115,6 @@ ul li {
 /* 设置表格大小和位置 */
 table {
     width: 500px;
-    height: 150px;
     margin: 0 auto;
 }
 
