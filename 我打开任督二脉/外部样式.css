@@ -5,7 +5,7 @@
     background-repeat:no-repeat;
     background-position:center center;
     background-attachment:fixed;
-    background-size: 1400px 800px;
+    background-size: auto ;
     text-align: center;
  }
    ul{
@@ -29,17 +29,34 @@
    }
    form{
     text-align: center;
-    color: red;
+    color:greenyellow;
     font-size: 20px;
    }
    .txx{
-    border:1px solid #ccc;padding:7px 0px;border-radius:3px;padding-left:5px;-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);box-shadow:inset 0 1px 1px rgba(0,0,0,.075);-webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;-o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}input:focus{border-color:#66afe9;outline:0; -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+    border:1px solid #ccc;
+    padding:7px 0px;
+    border-radius:30px;
+    padding-left:5px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow:inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition:border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition:border-color ease-in-out .15s,box-shadow ease-in-out .15s}
+    input:hover{
+        border-color:aqua;
+        outline: 0px;
+        -webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+        box-shadow:inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
    }
+    input:focus{
+        outline:0px;
+        border-color:aqua;
+    }
    .tee{
     width: 70px; /* 宽度 */
 	height: 40px; /* 高度 */
 	border-width: 0px; /* 边框宽度 */
-	border-radius: 3px; /* 边框半径 */
+	border-radius: 30px; /* 边框半径 */
 	background:gray; /* 背景颜色 */
 	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
 	outline: none; /* 不显示轮廓线 */
@@ -48,7 +65,7 @@
 	font-size: 17px; /* 字体大小 */
    }
    .tee:hover { /* 鼠标移入按钮范围时改变颜色 */
-	background:burlywood;
+	background:aquamarine;
 }
    div{
     border-width:2px ;
@@ -59,17 +76,25 @@
     width:600px;
     margin:auto;
     border-style: solid;
-    border-color:azure;
+    border-left:none;
+    border-right:none;
+    border-top-color: beige;
+    border-bottom-color:greenyellow;
    }
    th,td{
     padding:5px;
     border-style:solid;
-    border-color:azure;
-    margin:0ch;
+    border-color:beige;
+    border-right:none;
+    border-left:none;
+    margin:0px;
+    border-left-width: 0ch;
+    border-right-width: 0ch;
    }
    td{
    color:beige;
+   border-color: greenyellow;
    }
   #thed{
-    color:brown;
+    color:aqua;
   }
