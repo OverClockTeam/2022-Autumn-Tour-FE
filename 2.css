@@ -55,17 +55,11 @@ input[type=text]:focus {
 }
 
 .div1 {
-    position: absolute;
-    top: 152px;
-    right: 456px;
-    color: rgb(6, 50, 183);
+    color: rgb(243, 219, 4);
 }
 
 .div2 {
-    position: absolute;
-    right: 443px;
-    color: rgb(6, 50, 183);
-    top: 295px;
+    color: rgb(243, 219, 4);
 }
 
 input[type=submit] {
@@ -84,39 +78,42 @@ input[type=submit]:hover {
 }
 
 table {
+    color: white;
     margin-left: auto;
     margin-right: auto;
     width: 40%;
 }
 
 th {
+    font-size: 20px;
     height: 35px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 td {
     text-align: center;
     height: 35px;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
 }
 
 table a {
     text-decoration: none;
+    color: yellow;
 }
 
 body {
     animation-name: body;
     animation-duration: 1s;
-    background-image: url(images/ba12.png);
+    background-image: url(images/ba33.jpg);
     animation-timing-function: linear;
+    background-position: center center;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
 }
 
 @keyframes body {
     0% {
         opacity: 0;
-        background-image: url(images/ba11.jpg);
     }
 
     25% {
@@ -133,6 +130,5 @@ body {
 
     100% {
         opacity: 1;
-        background-image: url(images/ba12.png);
     }
 }
